@@ -1,0 +1,13 @@
+Very large or very small numbers are best input with exponential notation. For instance, the number 8000000 (eight million) is equal to . In this course, you can enter that as either 8 * 10 ^ 6 or as 8e6 in these problems. Try out exponential notation in the question below.
+
+One gigajoule is equal to 947817 British thermal units. Enter this number below in exponential notation.
+The tolerance on this question is 5%.
+
+9.47817e5 BTU 
+PS:5% of 947,817 is approximately 47,390.85.
+This means your answer can range from:
+947,817−47,390.85=900,426.15
+947,817−47,390.85=900,426.15
+to 
+947,817+47,390.85=995,207.85
+947,817+47,390.85=995,207.85
