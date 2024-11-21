@@ -1,4 +1,4 @@
-## An Introduction to Statistical Learning External link, 2nd edition ##
+# An Introduction to Statistical Learning External link, 2nd edition 
 Statistical learning refers to a vast set of tools for understanding data. These
  tools can be classified as supervised or unsupervised. Broadly speaking,
  supervised statistical learning involves building a statistical model for pre
@@ -10,4 +10,4 @@ ture from such data.
 
 
 
-##Wage Data
+#Wage Data
