@@ -61,7 +61,7 @@ df_results = pd.DataFrame(columns=['Predictor', 'R2 Train', 'R2 Test'])
 #For each predictor in the dataframe, call the function "fit_and_plot_linear()" from the helper file with the predictor as a parameter to the function
 This function will split the data into train and test split, fit a linear model on the train data and compute the R-squared value on both the train and test data
 
-#**Your code here**
+**Your code here**
 #Define the predictors from the dataframe
 predictors = ['TV', 'Radio', 'Newspaper']
 
@@ -112,7 +112,7 @@ sklearn.linear_model.LinearRegression.predict():Predict using the linear model.
 
 sklearn.metrics.mean_squared_error():Computes the mean squared error regression loss
 __________________________________________________________________________________________________________
-# Import necessary libraries
+#Import necessary libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -167,7 +167,7 @@ for i in cols:
     # Append the computed MSE to the list
     mse_list.append(MSE)
 
-# Helper code to display the MSE for each predictor combination
+#Helper code to display the MSE for each predictor combination
 t = PrettyTable(['Predictors', 'MSE'])
 
 for i in range(len(mse_list)):
