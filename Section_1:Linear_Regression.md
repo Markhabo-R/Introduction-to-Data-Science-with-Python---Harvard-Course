@@ -1,4 +1,5 @@
-# Pre-Reading Questions with Answers: 
+# Section 1: Linear Regression
+## Pre-Reading Questions with Answers: 
 1.The authors in the book call the error term "a catch-all". Which of the following is not part of the catch-all error? A mistake in the code
 2.Sample and Population
 The sample mean and population means are different. True
