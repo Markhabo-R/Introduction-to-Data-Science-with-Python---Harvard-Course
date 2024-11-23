@@ -41,4 +41,5 @@ plt.ylabel():This is used to specify the text to be displayed as the label for t
 
 plt.title():This is used to specify the title to be displayed for the plot 
 </span>
+<span style="color: green;">This text will appear green.</span>
 
