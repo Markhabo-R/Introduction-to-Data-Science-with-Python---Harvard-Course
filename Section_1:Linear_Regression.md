@@ -42,7 +42,7 @@ plt.ylabel():This is used to specify the text to be displayed as the label for t
 
 plt.title():This is used to specify the title to be displayed for the plot 
 ______________________________________________________________________________________________________________________________
-# Import necessary libraries
+#Import necessary libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 %matplotlib inline
