@@ -379,6 +379,106 @@ D. All of the above
 ###edTest(test_chow2) ###
 #Type your answer within in the quotes given
 answer2 = 'D'
+__________________________________________________________________________________________________________
+Exercise 3: Miltiple regression 
+Polynomial Modeling
+The goal of this exercise is to fit linear regression and polynomial regression to the given data. Plot the fit curves of both the models along with the data and observe what the residuals tell us about the two fits. 
+Instructions
+Read the poly.csv file into a dataframe
+
+Fit a linear regression model on the entire data, using LinearRegression() object from sklearn library
+
+Guesstimate the degree of the polynomial which would best fit the data
+
+Fit a polynomial regression model on the computed PolynomialFeatures using LinearRegression() object from sklearn library
+
+Plot the linear and polynomial model predictions along with the data
+
+Compute the polynomial and linear model residuals using the formula below 
+![image](https://github.com/user-attachments/assets/df69b4eb-2ea6-4d0d-8fbb-b3fdc5ce5f6d)
+
+Plot the histogram of the residuals and comment on your choice of the polynomial degree. 
+
+Hints:
+df.head()
+ Returns a pandas dataframe containing the data and labels from the file data
+
+plt.subplots()
+Create a figure and a set of subplots
+
+sklearn.PolynomialFeatures()
+Generates a new feature matrix consisting of all polynomial combinations of the features with degree less than or equal to the specified degree
+
+sklearn.fit_transform()
+Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X
+
+sklearn.LinearRegression()
+LinearRegression fits a linear model
+
+sklearn.fit()
+Fits the linear model to the training data
+
+sklearn.predict()
+Predict using the linear model
+
+plt.plot()
+Plots x versus y as lines and/or markers
+
+plt.axvline()
+Add a vertical line across the axes
+
+ax.hist()
+Plots a histogram
+________________________________________________________________________________________________________________________________________
+SOlution 
+#Import necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import PolynomialFeatures
+%matplotlib inline
+
+#Read the data from 'poly.csv' to a dataframe
+df = pd.read_csv('poly.csv')
+# Get the column values for x & y in numpy arrays
+x = df[['x']].values
+y = df['y'].values
+
+#Take a quick look at the dataframe
+df.head()
+#Plot x & y to visually inspect the data
+
+fig, ax = plt.subplots()
+ax.plot(x,y,'x')
+ax.set_xlabel('$x$ values')
+ax.set_ylabel('$y$ values')
+ax.set_title('$y$ vs $x$');
+
+#Set the train size to 0.8 and random state to 22
+x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=22)
+#Initialize a linear model
+model = LinearRegression()
+
+#Fit the model on the train data
+model.fit(x_train, y_train)
+
+#Get the predictions on the test data using the trained model
+y_lin_pred = model.predict(x_test)
+
+#Guess the correct polynomial degree based on the above graph
+guess_degree = 4
+
+#Generate polynomial features on the train data
+x_poly_train= PolynomialFeatures(degree=guess_degree).fit_transform(x_train)
+
+#Generate polynomial features on the test data
+x_poly_test= PolynomialFeatures(degree=guess_degree).fit_transform(x_test)
+
+#Initialize a model to perform polynomial regression
+polymodel = LinearRegression(fit_intercept=False)
+
 
 
 
